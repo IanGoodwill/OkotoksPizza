@@ -1,0 +1,88 @@
+/*# sourceMappingURL=main.css.map */
+@media screen and (min-width: 350px) {
+	body {
+		.pmenu {
+			width: 100%;
+			
+		}
+		.appetizer {
+			width: 100%;
+			
+		}
+		.entree {
+			width: 100%;
+			
+		}
+		.bev {
+			width: 100%;
+		
+		}
+    }
+    
+  .header-top a {
+    float: none;
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+
+
+
+}
+@media screen and (min-width: 660px) {
+	body {
+		.pmenu {
+			width: calc( 100% / 2 );
+			
+		}
+		.appetizer {
+			width: calc( 100% / 2 );
+			
+		}
+		.entree {
+			width: calc( 100% / 2 );
+			
+		}
+		.bev {
+			width: calc( 100% / 2 );
+			
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	body {
+		.starter {
+			width: calc( 100% / 4 );
+		}
+		.pmenu {
+			width: calc( 100% / 4 );
+		}
+		.entree {
+			width: calc( 100% / 4 );
+		}
+		.bev {
+			width: calc( 100% / 4 );
+		}
+    }
+    body h1 h2 h3 h4 h5 {
+
+        font-size: 2rem;
+
+    	}
+	}
+}
+
+@media screen and (min-width: 320px)  {
+	body {
+		font-size: 1em;
+	}
+}
+
+
+
+@media screen and (min-width: 800px)  {
+	body {
+		font-size: 2em;
+	}
+}
