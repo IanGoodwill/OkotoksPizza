@@ -1,0 +1,489 @@
+@use 'media-queries';
+
+@use 'variables';
+
+@use 'reset';
+
+.homepage {
+	display: flex;
+	flex-wrap: wrap;
+	background-image: url(../img/pizza-board-background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.NavBar  {
+    width: 100%;
+    display: flex;
+    background-color: rgba($color: #c5bcbc, $alpha: 0.75);
+	position: sticky;
+	top: 0;
+    height: 100px;
+}
+
+.NavLogo  {
+    display: inline-block;
+    width: 150px;
+    height: auto;
+    background-image: url(../img/okotoks-pizza-logo3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.NavLinks  {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	font-family: variables.$fontstackhead;
+	a  {
+		margin: 5px;
+		font-weight: 800;
+	}
+}
+
+.homepage-content {
+	width: 100%;
+	background-color: rgba($color: #c5bcbc, $alpha: 0.5);
+	h1 {
+		text-align: center;
+		-webkit-text-fill-color: variables.$color; 
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: white;
+		font-size: 4rem;
+		font-family: variables.$fontstackhead;
+		
+	}
+}
+.written-content {
+	background-color: rgba($color: #c5bcbc, $alpha: 0.5);
+	h3 {
+		text-align: center;
+		font-family: variables.$fontstackhead;
+		font-size: 2rem;
+		
+	}
+	p {
+		text-align: center;
+		font-family: variables.$fontstackhead;
+		margin: 50px;
+	}
+}
+
+.home-link-menu	{
+	width: 100%;
+	text-align: center;
+	font-family: variables.$fontstackhead;
+		margin: 50px;
+		
+}
+
+.home-link-menu  a  {
+	color: variables.$color ;
+	z-index: 2;
+}
+
+.footer {
+	display: grid;
+	background-color: variables.$color;
+	grid-row-start: footer;
+	justify-items: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.phone {
+	display: flex;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	height: 100px;
+		h3  {
+			font-size: 0.75rem;
+			color: black;
+			font-family: variables.$fontstackhead;
+		}
+		a  {
+			color: black;
+		}
+	}
+
+.about-page {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/cutting-board-tall.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	  h1,p  {
+		font-family: variables.$fontstackhead;
+		padding: 10px;
+		margin: 10px;
+	  }
+	  .about-page-content  {
+		background-color: rgba(216, 199, 199, 0.5);
+		width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	  }
+}
+
+.kitchen  {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.kitchen-img  {
+	max-width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.family  {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.family-dining  {
+	max-width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.menu-page {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/pizza-menu-background1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+.starters {
+	text-align: center;
+	background-color: rgba($color: #cfc0c0, $alpha: 0.5);
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	order: 1;
+	border-right: 6px solid variables.$color;
+	border-top: 3px solid variables.$color;
+	align-items: center;
+	justify-self: center;
+	.wings-menu-image {
+		width: 100%;
+	}
+	p {
+		opacity: 1;
+		font-size: 1.5rem;
+		font-family: variables.$fontstackhead;
+	}
+	p + p {
+		border-bottom: 1px dotted variables.$color;
+		margin-bottom: 5%;
+	}
+	h5 {
+		width: 100%;
+		text-align: center;
+		font-size: 1.75rem;
+		text-decoration: underline solid variables.$color;
+		font-family: variables.$fontstackhead;
+	}
+	ul {
+		text-align: center;
+		}
+		
+		li {
+		display: inline-block;
+		width: 100%;
+		}
+}
+h6 {
+	font-size: 1.75rem;
+	
+}
+.pmenu {
+	text-align: center;
+	background-color: rgba($color: #cfc0c0, $alpha: 0.5);
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	order: 2;
+	border-right: 6px solid variables.$color;
+	border-top: 3px solid variables.$color;
+	align-items: center;
+	justify-self: center;
+	p {
+		opacity: 1;
+		font-size: 1.5rem;
+		font-family: variables.$fontstackhead;
+	}
+	
+	.pizza-menu-image {
+		width: 100%;
+	}
+	p + p {
+		border-bottom: 1px dotted variables.$color;
+		margin-bottom: 5%;
+	}
+	h5 {
+		width: 100%;
+		text-align: center;
+		font-size: 1.75rem;
+		text-decoration: underline solid variables.$color;
+		font-family: variables.$fontstackhead;
+	}
+	ul {
+		text-align: center;
+		}
+		
+		li {
+		display: inline-block;
+		width: 100%;
+		}
+}
+.entree {
+	text-align: center;
+	background-color: rgba($color: #cfc0c0, $alpha: 0.5);
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	order: 3;
+	border-right: 6px solid variables.$color;
+	border-top: 3px solid variables.$color;
+	align-items: center;
+	justify-self: center;
+	p {
+		opacity: 1;
+		font-size: 1.5rem;
+		font-family: variables.$fontstackhead;
+	}
+	.entree-menu-image {
+		width: 100%;
+	}
+	p + p {
+		border-bottom: 1px dotted variables.$color;
+		margin-bottom: 5%;
+		
+	}
+	h5 {
+		width: 100%;
+		text-align: center;
+		font-size: 1.75rem;
+		text-decoration: underline solid variables.$color;
+		font-family: variables.$fontstackhead;
+	}
+	ul {
+		text-align: center;
+		}
+		
+		li {
+		display: inline-block;
+		width: 100%;
+		}
+}
+
+.wing  {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.pizza-pic  {
+	max-width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.entree-pic  {
+	max-width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.inside-content {
+	h4, p, a {
+		
+		justify-self: center;
+		padding: 10px;
+		margin: 10px;
+		}
+
+}
+.review  {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	padding: 20px;
+	margin: 20px;
+	a  {
+		opacity: 1;
+		font-size: 1.5rem;
+		font-family: variables.$fontstackhead;
+	}
+}
+
+.video {
+	width: 100%;
+	display: block;
+	position: relative;
+    overflow: hidden;
+	padding-top: 49.55%;
+	h1  {
+		width: 100%;
+		opacity: 0;
+	}
+}
+
+.pizza-video  {
+	position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+	border: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.goodbye {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	 h4 {
+		height: 300px;
+		font-size: 1.75rem;
+		justify-self: center;
+		padding: 10px;
+		margin: 10px;
+	}
+}
+
+.contact-content  {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	background-image: url(../img/food-italian-background.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		h1, h2  {
+			font-size: 3rem;
+			font-family: variables.$fontstackhead;
+			width: 100%;
+			text-align: center;
+			
+		}
+		h4 {
+			font-size: 2.5rem;
+			width: 100%;
+			padding: 40px;
+			font-family: variables.$fontstackhead;
+		}
+		a  {
+			padding: 10%;
+			width: 100%;
+			font-size: 3rem;
+			font-family: variables.$fontstackhead;
+		}
+}		
+		
+	
+	
+
+.icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+	background-color: rgba(216, 199, 199, 0.5);
+	padding: 20px;
+	margin: 20px;
+  }
+
+  .icon-contaner , i  {
+    margin: 10px;
+    padding: 10px;
+    font-size: 5em;
+  }
+  
+  .fa-facebook-square {
+    color: #3b5998;
+  }
+  
+  .fa-twitter-square {
+    color: #1DA1F2;
+  }
+  
+  .fa-pinterest-square {
+    color: #BD081C;
+  }
+  
+  .fa-instagram {
+    color: #231F20;
+  }
+  
+  .fa-reddit-square {
+    color: #FF5700;
+  }
+  
+  .fa-envelope {
+    color: black;
+  }
+
+  .location-page  {
+	  width: 100%;
+	  background-image: url(../img/food-board-background.jpg)
+	  ;
+	  background-size: cover;
+	  .gmap  {
+		  width: 80%;
+		  margin-left: auto;
+		margin-right: auto;
+	  }
+	  h2  {
+		font-size: 2rem;
+		font-family: variables.$fontstackhead;
+		text-align: center;
+	  }
+  }
