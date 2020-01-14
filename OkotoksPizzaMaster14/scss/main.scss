@@ -1,0 +1,674 @@
+@use 'media-queries';
+
+@use 'variables';
+
+@use 'reset';
+
+.homepage {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-image: url(../img/food-italian.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.header {
+	grid-area: header;
+	background-color: rgba($color: #ebe3e3, $alpha: 0.5);
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+  }
+  
+  .header ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	background-color: #fff;
+  }
+  
+  .header li a {
+	display: block;
+	padding: 20px 20px;
+	border-right: 1px solid #f4f4f4;
+	text-decoration: none;
+	font-family: variables.$fontstackhead;
+	color: black;
+
+  }
+  
+  .header li a:hover {
+	background-color: #f4f4f4;
+  }
+  
+  .header .logo {
+	display: block;
+	min-height: 60px;
+	min-width: 70px;
+	float: left;
+	font-size: 2em;
+	padding: 10px 20px;
+	text-decoration: none;
+	background-image: url(../img/okotoks-pizza-logo3.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	justify-self: center;
+  }
+  
+  .header .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+	background-color: rgba($color: #ebe3e3, $alpha: 0.5);
+  }
+  .header .menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	padding: 28px 20px;
+	position: relative;
+	user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+	background: #333;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background .2s ease-out;
+	width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+	background: #333;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+	top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+	top: -5px;
+  }
+  .header .menu-btn {
+	display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+	max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+	background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+	top: 0;
+  }
+
+.homepage-content {
+	width: 100%;
+	text-align: center;
+	background-color: rgba($color: #c5bcbc, $alpha: 0.5);
+	h1 {
+		text-align: center;
+		-webkit-text-fill-color: variables.$color; 
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: white;
+		font-size: 2rem;
+		font-family: variables.$fontstackhead;
+	
+	}
+}
+.written-content {
+	width: 100%;
+	background-color: rgba($color: #c5bcbc, $alpha: 0.5);
+	h1 {
+		text-align: center;
+		font-family: variables.$fontstackhead;
+		font-size: 2rem;
+		
+	}
+	p {
+		text-align: left;
+		font-family: variables.$fontstackhead;
+		margin: 50px;
+	}
+}
+
+.home-link-menu	{
+	
+	text-align: center;
+	font-family: variables.$fontstackhead;
+		margin: 50px;
+		
+}
+
+.home-link-menu  a  {
+	color: variables.$color ;
+	z-index: 2;
+}
+
+.footer {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-areas: "phone-footer copyright";
+	background-color: rgba($color: #ebe3e3, $alpha: 0.5);
+	grid-row-start: footer;
+	justify-items: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	min-height: 40px;
+	h3  {
+		font-size: 1em;
+	}
+	a:visited {
+		color: black;
+	  }
+	  a  {
+		  color: black;
+	  }
+	  .phone-footer  {
+		grid-area: phone-footer;
+	  }
+	  .copyright  {
+		  grid-area: copyright;
+	  }
+}
+
+.phone {
+	display: flex;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	height: 100px;
+		h3  {
+			font-size: 0.75rem;
+			color: black;
+			font-family: variables.$fontstackhead;
+		}
+		a  {
+			color: black;
+		}
+	}
+
+.about-page {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/cutting-board-tall.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	  h1,p  {
+		font-family: variables.$fontstackhead;
+		padding: 10px;
+		margin: 10px;
+	  }
+	  .about-page-content  {
+		background-color: rgba(216, 199, 199, 0.5);
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		h1  {
+			text-align: center;
+		}
+	  }
+}
+
+.kitchen  {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.kitchen-img  {
+	max-width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding:1px;
+	border:1px solid black;
+	border-width: 2px;
+}
+
+.family  {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.family-dining  {
+	max-width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding:1px;
+	border:1px solid black;
+	border-width: 2px;
+}
+
+.menu-page {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/pizza-menu-background1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+
+
+.starters {
+	grid-area: starters;
+	text-align: center;
+	background-color: rgba($color: #cfc0c0, $alpha: 0.5);
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	order: 1;
+	align-items: center;
+	justify-self: center;
+	.wings-menu-image {
+		align-self: center;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		.wing  {
+			padding:1px;
+			   border:1px solid black;
+			   border-width: 2px;
+		}
+	}
+	p {
+		opacity: 1;
+		font-size: 1.5rem;
+		font-family: variables.$fontstackhead;
+		padding: 5px;
+		
+	}
+	p + p {
+		border-bottom: 1px dotted variables.$color;
+		margin-bottom: 5%;
+	}
+	h5 {
+		width: 100%;
+		text-align: center;
+		font-size: 1.75rem;
+		text-decoration: underline solid black;
+		font-family: variables.$fontstackhead;
+	}
+	ul {
+		text-align: center;
+		}
+		
+		li {
+		display: inline-block;
+		width: 100%;
+		padding: 5px;
+		}
+}
+h6 {
+	font-size: 1.75rem;
+	
+}
+.pmenu {
+	grid-area: pmenu;
+	text-align: center;
+	background-color: rgba($color: #cfc0c0, $alpha: 0.5);
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	order: 2;
+	align-items: center;
+	justify-self: center;
+	p {
+		opacity: 1;
+		font-size: 1.5rem;
+		font-family: variables.$fontstackhead;
+		padding: 5px;
+	}
+	
+	.pizza-menu-image {
+		width: 100%;
+		.pizza-pic  {
+			padding:1px;
+			   border:1px solid black;
+			   border-width: 2px;
+		}
+	}
+	p + p {
+		border-bottom: 1px dotted variables.$color;
+		margin-bottom: 5%;
+	}
+	h5 {
+		width: 100%;
+		text-align: center;
+		font-size: 1.75rem;
+		text-decoration: underline solid black;
+		font-family: variables.$fontstackhead;
+	}
+	ul {
+		text-align: center;
+		}
+		
+		li {
+		display: inline-block;
+		width: 100%;
+		}
+}
+.entree {
+	grid-area: entree;
+	text-align: center;
+	background-color: rgba($color: #cfc0c0, $alpha: 0.5);
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	order: 3;
+	align-items: center;
+	justify-self: center;
+	
+	p {
+		opacity: 1;
+		font-size: 1.5rem;
+		font-family: variables.$fontstackhead;
+		padding: 5px;
+	}
+	.entree-menu-image {
+		width: 100%;
+		.entree-pic  {
+			padding:1px;
+			   border:1px solid black;
+			   border-width: 2px;
+		}
+	}
+	p + p {
+		border-bottom: 1px dotted variables.$color;
+		margin-bottom: 5%;
+		
+	}
+	h5 {
+		width: 100%;
+		text-align: center;
+		font-size: 1.75rem;
+		text-decoration: underline solid black;
+		font-family: variables.$fontstackhead;
+	}
+	ul {
+		text-align: center;
+		}
+		
+		li {
+		display: inline-block;
+		width: 100%;
+		}
+}
+
+.wing  {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.pizza-pic  {
+	max-width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.entree-pic  {
+	max-width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.inside-content {
+	h4, p, a {
+		
+		justify-self: center;
+		padding: 10px;
+		margin: 10px;
+		}
+
+}
+.review  {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	padding: 20px;
+	margin: 20px;
+	a  {
+		opacity: 1;
+		font-size: 1.5rem;
+		font-family: variables.$fontstackhead;
+	}
+}
+
+.video {
+	width: 100%;
+	display: block;
+	position: relative;
+    overflow: hidden;
+	padding-top: 49.55%;
+	h1  {
+		width: 100%;
+		opacity: 0;
+	}
+}
+
+.pizza-video  {
+	position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+	border: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.goodbye {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	 h4 {
+		height: 300px;
+		font-size: 1.75rem;
+		justify-self: center;
+		padding: 10px;
+		margin: 10px;
+	}
+}
+
+.contact-content  {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	grid-area: contact;
+	
+		h1   {
+			font-size: 1.5rem;
+			font-family: variables.$fontstackhead;
+			width: 100%;
+			text-align: center;
+			text-decoration: underline solid black;
+
+		}
+		 h2  {
+			font-size: 1.5rem;
+			font-family: variables.$fontstackhead;
+			width: 100%;
+			text-align: center;	
+		}
+		h4 {
+			font-size: 1rem;
+			width: 100%;
+			padding: 5px;
+			font-family: variables.$fontstackhead;
+		}
+		a  {
+			padding: 5%;
+			width: 100%;
+			font-size: 1.5rem;
+			font-family: variables.$fontstackhead;
+		}
+}		
+		
+	
+	
+
+.icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+	background-color: rgba(216, 199, 199, 0.5);
+	padding: 20px;
+	margin: 20px;
+  }
+
+  .icon-contaner , i  {
+    margin: 10px;
+    padding: 10px;
+    font-size: 5em;
+  }
+  
+  .fa-facebook-square {
+    color: #3b5998;
+  }
+  
+  .fa-twitter-square {
+    color: #1DA1F2;
+  }
+  
+  .fa-pinterest-square {
+    color: #BD081C;
+  }
+  
+  .fa-instagram {
+    color: #231F20;
+  }
+  
+  .fa-reddit-square {
+    color: #FF5700;
+  }
+  
+  .fa-envelope {
+    color: black;
+  }
+
+  .contact-location-page  {
+	  width: 100%;
+	  background-image: url(../img/food-board-big.jpg)
+	  ;
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  .gmap  {
+		  width: 80%;
+		  margin-left: auto;
+		margin-right: auto;
+	  }
+	  h2  {
+		font-size: 1rem;
+		font-family: variables.$fontstackhead;
+		text-align: center;
+	  }
+  }
+
+.location-page  {
+	grid-area: location;
+	h2  {
+		font-size: 1.5rem;
+			font-family: variables.$fontstackhead;
+			width: 100%;
+			text-align: center;
+			text-decoration: underline solid black;
+		}
+	h4  {
+		font-size: 1rem;
+			font-family: variables.$fontstackhead;
+			width: 100%;
+			text-align: center;
+	}
+	
+}
+
+  .fling-minislide {
+	  display: block;
+	width:100%; 
+	height:0px;
+	padding-bottom: 66%; 
+	overflow:hidden; 
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.fling-minislide img  {
+	display: block;
+	 position:absolute;
+	  animation:fling-minislide 20s infinite;
+	 opacity:0; 
+	 width: 100%;
+	  height: auto;}
+
+@keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}}
+.fling-minislide img:nth-child(4){animation-delay:0s;}
+.fling-minislide img:nth-child(3){animation-delay:5s;}
+.fling-minislide img:nth-child(2){animation-delay:10s;}
+.fling-minislide img:nth-child(1){animation-delay:15s;}
