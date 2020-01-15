@@ -78,12 +78,14 @@ body {
 			margin-right:300px;
 		}
 	}
+	// for the footer
 	@media screen
 and (min-width: 640px) {
    .phone-footer  {
        pointer-events: none;
    }
 }
+//  menu page
 @media screen and (min-width:1200px)  {
 	.menu-page  {
 		width: 100%;
@@ -102,6 +104,7 @@ and (min-width: 640px) {
 	}
 	
 }
+//  contact page
 @media screen and (min-width:1200px)  {
 	.contact-location-page  {
 		width: 100%;
