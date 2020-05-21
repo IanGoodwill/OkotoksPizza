@@ -1,0 +1,66 @@
+/*# sourceMappingURL=main.css.map */
+
+body {
+		@media screen and (min-width: 350px) {
+			.pmenu {
+				width: 100%;
+			}
+			.appetizer {
+				width: 100%;	
+			}
+			.entree {
+				width: 100%;	
+			}
+			.bev {
+				width: 100%;
+		}	
+	.header-top a {
+		float: none;
+		width: 100%;
+	}
+	.row {
+		flex-direction: column;
+	}
+	
+	@media screen and (min-width: 1200px) {
+		
+			 h1, h2, h3, h4, h5 {
+			font-size: 2rem;
+			}
+		}
+	}
+	@media screen and (min-width: 320px)  {
+		body {
+			font-size: 1em;
+		}
+	}
+	@media screen and (min-width: 800px)  {
+		body {
+			font-size: 2em;
+		}
+	}
+	//Rules for the link in the nav bar
+
+	@media screen and (min-width: 320px)  {
+		.NavLinks {
+			font-size: 1em;
+		}
+	}
+	@media screen and (min-width: 768px)  {
+		.NavLinks {
+			font-size: 2rem;
+		}
+	}
+	@media screen and (min-width: 1200px)  {
+		.NavLinks {
+			font-size: 3rem;
+		}
+	}
+	// rules to make phone icon only visible on mobile
+	@media screen and (min-width:414px)  {
+		.phone  {
+			display: none;
+		}
+	}
+}
+
