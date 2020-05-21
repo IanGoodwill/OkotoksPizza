@@ -85,6 +85,8 @@
 
             <h4>Thank you for Visiting! Tell your Friends!</h4>
 
+            <p>  <?php echo( "Hello, World!" ); ?> </p>
+
         </section>
 
         <footer class="footer">
