@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Ian Goodwill">
     <link rel="shortcut icon" type="image/png" href="./img/okotoks-pizza-logo2.png">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <script src="./js/app.js"></script>
     <script src="https://kit.fontawesome.com/901edefaa6.js" crossorigin="anonymous"></script>
     <meta name="description" content="Home page for okotoks pizza">
